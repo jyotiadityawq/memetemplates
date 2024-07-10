@@ -1,0 +1,110 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #25a8ac;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 36px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.hint {
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+#meme-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#meme-list img {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    border: 3px solid #ffffff;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+#meme-list img:hover {
+    transform: scale(1.05);
+}
+
+#popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s;
+}
+
+#popup-container.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+#popup {
+    background-color: #86aaf2;
+    padding: 20px;
+    border: 3px solid #ccc;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: center;
+    width: 500px;
+    height: 700px;
+}
+
+#popup #close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+#popup-img {
+    width: 100%;
+    height: auto;
+    max-height: 500px;
+    margin-bottom: 20px;
+    border: 5px solid #ffffff;
+}
+
+#download-btn {
+    background-color: #001f08;
+    color: #fff;
+    padding: 15px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+}
+
+#download-btn:hover {
+    background-color: #00ff26;
+}
+
+#popup .hint {
+    font-size: 18px;
+    color: #ffffff;
+    margin-top: 20px;
+}
